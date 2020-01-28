@@ -17,6 +17,21 @@ using namespace std;
  * a mulit-way trie or a ternary search tree.
  */
 class DictionaryTrie {
+    class TrieNode {
+      private:
+        int frequency;
+        char value;
+
+      public:
+        TrieNode* left;
+        TrieNode* middle;
+        TrieNode* right;
+
+        TrieNode(const char& c) : value(c) { left = middle = right = 0; }
+        void setData(const char& c) { value = c; }
+        char getData() { return value; }
+    };
+
   private:
     // TODO: add private members and helper methods here
   public:
