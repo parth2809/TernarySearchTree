@@ -21,6 +21,7 @@ class DictionaryTrie {
       private:
         int frequency;
         char value;
+        bool endWord;
 
       public:
         TrieNode* left;
@@ -28,8 +29,12 @@ class DictionaryTrie {
         TrieNode* right;
 
         TrieNode(const char& c) : value(c) { left = middle = right = 0; }
-        void setData(const char& c) { value = c; }
-        char getData() { return value; }
+        void setVal(const char& c) { value = c; }
+        char getVal() { return value; }
+        void setFreq(const int& a) { frequency = a; }
+        int getFreq() { return frequency; }
+        void setFreq(const bool& b) { endWord = b; }
+        bool getFreq() { return endWord; }
     };
 
   private:
