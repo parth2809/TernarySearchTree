@@ -5,76 +5,166 @@
  */
 #include "DictionaryTrie.hpp"
 #include <iostream>
+#include <string>
 
 /* TODO */
-DictionaryTrie::DictionaryTrie() : root(0), treeSize(0), treeHeight() {}
+DictionaryTrie::DictionaryTrie() : root(nullptr), treeSize(0), treeHeight() {}
 
 /* TODO */
 bool DictionaryTrie::insert(string word, unsigned int freq) {
     int position = 0;
-    insertLetterNode(root, word[0], freq, position, word);
-    return true;
+    if (root == nullptr) {
+        root = new TrieNode(word[position], freq, false);
+    }
+    char c = word[position];
+    TrieNode* node = root;
+
+    while (true) {
+        if (c < node->getVal()) {
+            if (node->left != nullptr) {
+                node = node->left;
+            } else {
+                node->left = new TrieNode(c, freq, false);
+                node = node->left;
+                for (int i = position + 1; i < word.length(); i++) {
+                    node->middle = new TrieNode(word[i], freq, false);
+                    node = node->middle;
+                }
+                node->setFinalLetter(true);
+                break;
+            }
+        } else if (c > node->getVal()) {
+            if (node->right != nullptr) {
+                node = node->right;
+            } else {
+                node->right = new TrieNode(c, freq, false);
+                node = node->right;
+                for (int i = position + 1; i < word.length(); i++) {
+                    node->middle = new TrieNode(word[i], freq, false);
+                    node = node->middle;
+                }
+                node->setFinalLetter(true);
+                break;
+            }
+        } else {
+            if (position == word.length() - 1) {
+                node->setFinalLetter(true);
+                return true;
+            } else {
+                if (node->middle != nullptr) {
+                    node = node->middle;
+                    ++position;
+                    c = word[position];
+                } else {
+                    for (int i = position + 1; i < word.length(); i++) {
+                        node->middle = new TrieNode(word[i], freq, false);
+                        node = node->middle;
+                    }
+                    node->setFinalLetter(true);
+                    break;
+                }
+            }
+        }
+    }
+}
+/*
+TrieNode* DictionaryTrie::insertChar(TrieNode* node, string word,
+                                     unsigned int freq) {
+    char c = word[0];
+    if (node == nullptr) {
+        node = new TrieNode(c, freq, false);
+    } else if (node->getVal() < c) {
+        node->right = insertChar(node->right, word, freq);
+    } else if (node->getVal() > c) {
+        node->left = insertChar(node->right, word, freq);
+    } else if (word.length() != 1) {
+        word.erase(word[0]);
+        node->middle = insertChar(node->right, word, freq);
+    } else {
+        node->setFinalLetter(true);
+        node->setFreq(freq);
+    }
+    return node;
 }
 
 char DictionaryTrie::nextCharacter(string word, int position) {
     return word[position];
 }
 
-/* TODO */
-void DictionaryTrie::insertLetterNode(TrieNode* node, char c, unsigned int freq,
-                                      int position, string word) {
+
+//TODO
+DictionaryTrie::TrieNode* DictionaryTrie::insertLetterNode(
+    TrieNode* node, char c, unsigned int freq, int position, string word) {
     TrieNode* temp = node;
     // Current node does not exist
     if (temp == nullptr) {
         // Reached last char of input word and exits function
         if (position == word.length() - 1) {
-            temp = new TrieNode(c, freq, true);
-            return;
+            temp->setVal(c);
+            temp->setFreq(freq);
+            temp->setFinalLetter(true);
+            return temp;
         }
-        temp = new TrieNode(c, freq, false);
+        temp->setVal(c);
+        temp->setFreq(freq);
+        temp->setFinalLetter(false);
         position++;
-        insertLetterNode(temp->middle, nextCharacter(word, position), freq,
-                         position, word);
-    }
-    if (temp->getVal() < c) {
-        insertLetterNode(temp->right, c, freq, position, word);
-    } else if (temp->getVal() > c) {
-        insertLetterNode(temp->left, c, freq, position, word);
-    } else if (temp->getVal() == c) {
+        temp->middle = insertLetterNode(
+            temp->middle, nextCharacter(word, position), freq, position,
+word); } else if (temp->getVal() < c) { temp->right =
+insertLetterNode(temp->right, c, freq, position, word); } else if
+(temp->getVal() > c) { temp->left = insertLetterNode(temp->left, c, freq,
+position, word); } else if (temp->getVal() == c) {
         // Found last letter of word
         if (position == word.length() - 1) {
-            return;
+            return nullptr;
         }
         position++;
-        insertLetterNode(temp->middle, nextCharacter(word, position), freq,
-                         position, word);
+        temp->middle = insertLetterNode(
+            temp->middle, nextCharacter(word, position), freq, position,
+word);
     }
-    return;
+    return temp;
+    ;
 }
-
+*/
 /* TODO */
 bool DictionaryTrie::find(string word) const {
-    TrieNode* temp = root;
-    // Empty trie
-    if (temp == nullptr) {
+    if (root == nullptr) {
         return false;
     }
-    int counter = 0;
-    // Current node val is less than first char
-    while (counter != word.length() - 1) {
-        if (temp->getVal() < word[counter]) {
-            temp = temp->right;
-        } else if (temp->getVal() > word[counter]) {
-            temp = temp->left;
+    TrieNode* node = root;
+    int position = 0;
+    char c = word[position];
+
+    while (true) {
+        if (c < node->getVal()) {
+            if (node->left != nullptr) {
+                node = node->left;
+            } else {
+                return false;
+            }
+        } else if (c > node->getVal()) {
+            if (node->right != nullptr) {
+                node = node->right;
+            } else {
+                return false;
+            }
         } else {
-            temp = temp->middle;
+            if (position == word.length() - 1 &&
+                node->getFinalLetter() == true) {
+                return true;
+            } else {
+                if (node->middle != nullptr) {
+                    node = node->middle;
+                    ++position;
+                    c = word[position];
+                } else {
+                    return false;
+                }
+            }
         }
-        counter++;
     }
-    if (temp->getFinalLetter() == true && temp->getVal() == word[counter]) {
-        return true;
-    }
-    return false;
 }
 
 /* TODO */

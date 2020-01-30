@@ -28,5 +28,18 @@ TEST(DictTrieTests, TEST_1) {
     ASSERT_TRUE(dict.insert("food", 1));
     //   ASSERT_FALSE(dict.insert("food", 1));
     ASSERT_TRUE(dict.find("food"));
+    dict.insert("a", 1);
+    dict.insert("am", 2);
+    dict.insert("momy", 2);
+    dict.insert("momys", 3);
+    dict.insert("foody", 2);
+    ASSERT_TRUE(dict.find("food"));
+    ASSERT_TRUE(dict.find("am"));
+    ASSERT_FALSE(dict.find("foo"));
+    ASSERT_TRUE(dict.find("momy"));
+    ASSERT_TRUE(dict.find("momys"));
+    ASSERT_TRUE(dict.find("foody"));
+    ASSERT_TRUE(dict.find("a"));
+    ASSERT_FALSE(dict.find("momyss"));
 }
 /* TODO */
