@@ -25,12 +25,13 @@ void DictionaryTrie::insertLetterNode(TrieNode* node, char c, unsigned int freq,
                                       int position, string word) {
     TrieNode* temp = node;
     if (temp == nullptr) {
-        position++;
         if (position == word.length() - 1) {
             temp = new TrieNode(c, freq, true);
+            return;
         } else {
             temp = new TrieNode(c, freq, false);
         }
+        position++;
         if (position != word.length()) {
             insertLetterNode(root, nextCharacter(word, position), freq,
                              position, word);
@@ -41,6 +42,9 @@ void DictionaryTrie::insertLetterNode(TrieNode* node, char c, unsigned int freq,
     } else if (temp->getVal() > c) {
         insertLetterNode(temp->right, c, freq, position, word);
     } else if (temp->getVal() == c) {
+        if (position == word.length() - 1) {
+            return;
+        }
         position++;
         if (position != word.length()) {
             insertLetterNode(temp->middle, nextCharacter(word, position), freq,
