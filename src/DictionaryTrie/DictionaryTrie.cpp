@@ -53,7 +53,29 @@ void DictionaryTrie::insertLetterNode(TrieNode* node, char c, unsigned int freq,
 }
 
 /* TODO */
-bool DictionaryTrie::find(string word) const { return false; }
+bool DictionaryTrie::find(string word) const {
+    TrieNode* temp = root;
+    // Empty trie
+    if (temp == nullptr) {
+        return false;
+    }
+    int counter = 0;
+    // Current node val is less than first char
+    while (counter != word.length() - 1) {
+        if (temp->getVal() < word[counter]) {
+            temp = temp->right;
+        } else if (temp->getVal() > word[counter]) {
+            temp = temp->left;
+        } else {
+            temp = temp->middle;
+        }
+        counter++;
+    }
+    if (temp->getFinalLetter() == true && temp->getVal() == word[counter]) {
+        return true;
+    }
+    return false;
+}
 
 /* TODO */
 vector<string> DictionaryTrie::predictCompletions(string prefix,
