@@ -24,32 +24,30 @@ char DictionaryTrie::nextCharacter(string word, int position) {
 void DictionaryTrie::insertLetterNode(TrieNode* node, char c, unsigned int freq,
                                       int position, string word) {
     TrieNode* temp = node;
+    // Current node does not exist
     if (temp == nullptr) {
+        // Reached last char of input word and exits function
         if (position == word.length() - 1) {
             temp = new TrieNode(c, freq, true);
             return;
-        } else {
-            temp = new TrieNode(c, freq, false);
         }
+        temp = new TrieNode(c, freq, false);
         position++;
-        if (position != word.length()) {
-            insertLetterNode(root, nextCharacter(word, position), freq,
-                             position, word);
-        }
+        insertLetterNode(temp->middle, nextCharacter(word, position), freq,
+                         position, word);
     }
     if (temp->getVal() < c) {
-        insertLetterNode(temp->left, c, freq, position, word);
-    } else if (temp->getVal() > c) {
         insertLetterNode(temp->right, c, freq, position, word);
+    } else if (temp->getVal() > c) {
+        insertLetterNode(temp->left, c, freq, position, word);
     } else if (temp->getVal() == c) {
+        // Found last letter of word
         if (position == word.length() - 1) {
             return;
         }
         position++;
-        if (position != word.length()) {
-            insertLetterNode(temp->middle, nextCharacter(word, position), freq,
-                             position, word);
-        }
+        insertLetterNode(temp->middle, nextCharacter(word, position), freq,
+                         position, word);
     }
     return;
 }
