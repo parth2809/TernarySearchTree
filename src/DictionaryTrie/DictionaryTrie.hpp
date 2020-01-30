@@ -28,23 +28,34 @@ class DictionaryTrie {
         TrieNode* middle;
         TrieNode* right;
 
-        TrieNode(const char& c) : value(c) { left = middle = right = 0; }
+        TrieNode(const char& c, const int& a, const bool& b)
+            : value(c), frequency(a), endWord(b) {
+            left = middle = right = nullptr;
+        }
         void setVal(const char& c) { value = c; }
         char getVal() { return value; }
         void setFreq(const int& a) { frequency = a; }
         int getFreq() { return frequency; }
-        void setFreq(const bool& b) { endWord = b; }
-        bool getFreq() { return endWord; }
+        void setFinalLetter(const bool& b) { endWord = b; }
+        bool getFinalLetter() { return endWord; }
     };
 
   private:
-    // TODO: add private members and helper methods here
+    TrieNode* root;
+    int treeHeight;
+    int treeSize;
+
   public:
     /* TODO: add function header */
     DictionaryTrie();
 
+    char nextCharacter(string word, int position);
+
     /* TODO: add function header */
     bool insert(string word, unsigned int freq);
+
+    void insertLetterNode(TrieNode* node, char c, unsigned int freq,
+                          int position, string word);
 
     /* TODO: add function header */
     bool find(string word) const;
