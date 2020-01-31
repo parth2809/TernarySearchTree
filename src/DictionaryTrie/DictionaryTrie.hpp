@@ -6,16 +6,17 @@
 #ifndef DICTIONARY_TRIE_HPP
 #define DICTIONARY_TRIE_HPP
 
+#include <queue>
 #include <string>
 #include <utility>
 #include <vector>
 
 using namespace std;
-
 /**
  * The class for a dictionary ADT, implemented as either
  * a mulit-way trie or a ternary search tree.
  */
+
 class TrieNode {
   private:
     int frequency;
@@ -53,17 +54,13 @@ class DictionaryTrie {
     /* TODO: add function header */
     DictionaryTrie();
 
-    char nextCharacter(string word, int position);
-
     /* TODO: add function header */
     bool insert(string word, unsigned int freq);
 
-    TrieNode* insert(TrieNode* node, char c, unsigned int freq);
+    TrieNode* findNode(string word) const;
 
-    TrieNode* insertChar(TrieNode* node, string word, unsigned int freq);
-
-    TrieNode* insertLetterNode(TrieNode* node, char c, unsigned int freq,
-                               int position, string word);
+    TrieNode* DictionaryTrie::traversal(TrieNode* node, string prefix,
+                                        pq* queue) const;
 
     /* TODO: add function header */
     bool find(string word) const;
@@ -80,4 +77,15 @@ class DictionaryTrie {
     ~DictionaryTrie();
 };
 
+struct compare {
+    bool operator()(pair<string, int>* w1, pair<string, int>* w2) const {
+        if (w1->second != w2->second) {
+            return w1->second < w2->second;
+        }
+        return w1->first < w2->first;
+    }
+};
+typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,
+                            compare>
+    pq;
 #endif  // DICTIONARY_TRIE_HPP

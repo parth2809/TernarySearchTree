@@ -5,8 +5,14 @@
  */
 #include "DictionaryTrie.hpp"
 #include <iostream>
+#include <queue>
 #include <string>
+#include <utility>
+using namespace std;
 
+typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,
+                            compare>
+    pq;
 /* TODO */
 DictionaryTrie::DictionaryTrie() : root(nullptr), treeSize(0), treeHeight() {}
 
@@ -167,10 +173,76 @@ bool DictionaryTrie::find(string word) const {
     }
 }
 
+TrieNode* DictionaryTrie::findNode(string word) const {
+    if (root == nullptr) {
+        return nullptr;
+    }
+    TrieNode* node = root;
+    int position = 0;
+    char c = word[position];
+
+    while (true) {
+        if (c < node->getVal()) {
+            if (node->left != nullptr) {
+                node = node->left;
+            } else {
+                return nullptr;
+            }
+        } else if (c > node->getVal()) {
+            if (node->right != nullptr) {
+                node = node->right;
+            } else {
+                return nullptr;
+            }
+        } else {
+            if (position == word.length() - 1) {
+                return node;
+            } else {
+                if (node->middle != nullptr) {
+                    node = node->middle;
+                    ++position;
+                    c = word[position];
+                } else {
+                    return nullptr;
+                }
+            }
+        }
+    }
+}
+
+TrieNode* DictionaryTrie::traversal(TrieNode* node, string prefix,
+                                    pq* queue) const {
+    if (node != nullptr) {
+        traversal(node->left, prefix, queue);
+        // Found a word, then creates a pair and adds to priority queue
+        if (node->getFinalLetter() == true) {
+            string newString = prefix + node->getVal();
+            queue->push(&make_pair(prefix, node->getFreq()));
+        }
+        // If going down, then it includes the character and continues
+        // traversing
+        traversal(node->middle, prefix + node->getVal(), queue);
+        traversal(node->right, prefix, queue);
+    }
+}
+
 /* TODO */
 vector<string> DictionaryTrie::predictCompletions(string prefix,
                                                   unsigned int numCompletions) {
-    return {};
+    // Finds end node of input prefix
+    TrieNode* node = findNode(prefix);
+    pq queue;
+    // Prefix itself is a word
+    if (node->getFinalLetter() == true) {
+        queue.push(&make_pair(prefix, node->getFreq()));
+    }
+    // Uses helper method to find all words that include the prefix
+    traversal(node, prefix, &queue);
+    vector<string> result;
+    while (result.size() < numCompletions) {
+        result.push_back((queue.top()->first));
+    }
+    return result;
 }
 
 /* TODO */
