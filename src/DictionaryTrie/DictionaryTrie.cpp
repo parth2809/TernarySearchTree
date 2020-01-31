@@ -261,6 +261,10 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
       }*/
     // Loops and inserts strings from greatest priority
     while (result.size() < numCompletions) {
+        // Num completions greater than queue size
+        if (queue->size() == 0) {
+            break;
+        }
         result.push_back((queue->top()->first));
         queue->pop();
     }
