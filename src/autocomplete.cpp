@@ -72,9 +72,12 @@ int main(int argc, char** argv) {
         getline(cin, word);
         cout << "Enter a number of completions:" << endl;
         cin >> numberOfCompletions;
-
+        vector<string> result =
+            dt->predictCompletions(word, numberOfCompletions);
         // TODO
-
+        for (int i = 0; i < result.size(); i++) {
+            cout << result[i] << endl;
+        }
         cout << "Continue? (y/n)" << endl;
         cin >> cont;
         cin.ignore();

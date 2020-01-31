@@ -256,18 +256,17 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
     // the prefix and pushes to queue
     traversal(node->middle, prefix);
     vector<string> result;
-    cout << queue->size() << "SIZE" << endl;
     // Manual check to see top of queue values
-    while (!queue->empty()) {
-        cout << queue->top()->first << "String" << endl;
-        cout << queue->top()->second << "Freq" << endl;
+    /*  while (!queue->empty()) {
+          cout << queue->top()->first << "String" << endl;
+          cout << queue->top()->second << "Freq" << endl;
+          queue->pop();
+      }*/
+    // Loops and inserts strings from greatest priority
+    while (result.size() < numCompletions) {
+        result.push_back((queue->top()->first));
         queue->pop();
     }
-    // Loops and inserts strings from greatest priority
-    /* while (result.size() < numCompletions) {
-         result.push_back((queue->top()->first));
-         queue->pop();
-     }*/
     return result;
 }
 
