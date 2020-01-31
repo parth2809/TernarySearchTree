@@ -25,14 +25,16 @@ TEST(DictTrieTests, EMPTY_TEST) {
 }
 TEST(DictTrieTests, TEST_1) {
     DictionaryTrie dict;
-    ASSERT_TRUE(dict.insert("food", 1));
-    //   ASSERT_FALSE(dict.insert("food", 1));
+    ASSERT_TRUE(dict.insert("food", 10));
+    // ASSERT_FALSE(dict.insert("food", 1));
     ASSERT_TRUE(dict.find("food"));
-    dict.insert("a", 1);
-    dict.insert("am", 2);
-    dict.insert("momy", 2);
-    dict.insert("momys", 3);
-    dict.insert("foody", 2);
+    dict.insert("a", 10);
+    dict.insert("am", 8);
+    dict.insert("momy", 6);
+    dict.insert("momys", 8);
+    dict.insert("foody", 8);
+    dict.insert("foob", 10);
+    vector<string> result = dict.predictCompletions("foo", 2);
     ASSERT_TRUE(dict.find("food"));
     ASSERT_TRUE(dict.find("am"));
     ASSERT_FALSE(dict.find("foo"));
@@ -41,5 +43,6 @@ TEST(DictTrieTests, TEST_1) {
     ASSERT_TRUE(dict.find("foody"));
     ASSERT_TRUE(dict.find("a"));
     ASSERT_FALSE(dict.find("momyss"));
+    ASSERT_EQ(1, 0);
 }
 /* TODO */

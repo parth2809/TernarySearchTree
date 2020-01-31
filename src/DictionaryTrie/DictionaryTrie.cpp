@@ -14,7 +14,9 @@ typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,
                             Tcompare>
     pq;
 /* TODO */
-DictionaryTrie::DictionaryTrie() : root(nullptr), treeSize(0), treeHeight() {}
+DictionaryTrie::DictionaryTrie() : root(nullptr), treeSize(0), treeHeight() {
+    queue = new pq();
+}
 
 /* TODO */
 bool DictionaryTrie::insert(string word, unsigned int freq) {
@@ -210,20 +212,27 @@ TrieNode* DictionaryTrie::findNode(string word) const {
     }
 }
 
-void DictionaryTrie::traversal(TrieNode* node, string prefix, pq* queue) const {
+void DictionaryTrie::traversal(TrieNode* node, string prefix) {
     if (node != nullptr) {
-        traversal(node->left, prefix, queue);
+        traversal(node->left, prefix);
+
         // Found a word, then creates a pair and adds to priority queue
         if (node->getFinalLetter() == true) {
+            // Creates pair with string and frequency
             pair<string, int> pair1;
-            pair1.first = prefix;
+            pair1.first = prefix + node->getVal();
             pair1.second = node->getFreq();
+            // Pushes the pair into the queue
             queue->push(&pair1);
+            cout << queue->top()->first << "Q TOP" << endl;
+            cout << queue->top()->second << "Q TOP" << endl;
+            queue->pop();
         }
         // If going down, then it includes the character and continues
         // traversing
-        traversal(node->middle, prefix + node->getVal(), queue);
-        traversal(node->right, prefix, queue);
+        traversal(node->middle, prefix + node->getVal());
+
+        traversal(node->right, prefix);
     }
 }
 
@@ -236,20 +245,23 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         vector<string> empty;
         return empty;
     }
-    pq queue;
     // Prefix itself is a word
     if (node->getFinalLetter() == true) {
         pair<string, int> pair1;
         pair1.first = prefix;
         pair1.second = node->getFreq();
-        queue.push(&pair1);
+        queue->push(&pair1);
     }
     // Uses helper method to find all words that include the prefix
-    traversal(node, prefix, &queue);
+    traversal(node->middle, prefix);
     vector<string> result;
-    while (result.size() < numCompletions) {
-        result.push_back((queue.top()->first));
-    }
+    cout << queue->size() << "SIZE" << endl;
+
+    // Loops and inserts strings from greatest priority
+    /*  while (result.size() < numCompletions) {
+          result.push_back((queue->top()->first));
+          queue->pop();
+      }*/
     return result;
 }
 
