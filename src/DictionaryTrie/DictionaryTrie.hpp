@@ -52,7 +52,7 @@ struct Tcompare {
             return w1->second < w2->second;
         }
         // Checks if first string is greater
-        return w1->first < w2->first;
+        return w1->first > w2->first;
     }
 };
 typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,

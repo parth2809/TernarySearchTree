@@ -1,39 +1,24 @@
-Reading file: data/shuffled_freq_dict.txt
+Reading file: data/dictionary.txt
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-and process until
-and fixes
-and understand how
-and state law
+!!!
+!!a
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-assed
-as fast as i
-as an industry
+55
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-basined
-baby out
-barbecued pork
+$$0b
+$$$$0
+$0b
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-her students
-he did not know
-helped turn the
-he had problems
-he take a
+(!@&#
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-but they do
-but he and other
-but it lacked
-but i never liked
-but once we were
-but another part of me
-but when there was
-but the combination of the
+aAa
 Continue? (y/n)
