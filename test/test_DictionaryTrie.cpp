@@ -43,6 +43,5 @@ TEST(DictTrieTests, TEST_1) {
     ASSERT_TRUE(dict.find("foody"));
     ASSERT_TRUE(dict.find("a"));
     ASSERT_FALSE(dict.find("momyss"));
-    ASSERT_EQ(1, 0);
 }
 /* TODO */

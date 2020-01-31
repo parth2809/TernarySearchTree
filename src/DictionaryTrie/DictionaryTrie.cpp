@@ -219,14 +219,14 @@ void DictionaryTrie::traversal(TrieNode* node, string prefix) {
         // Found a word, then creates a pair and adds to priority queue
         if (node->getFinalLetter() == true) {
             // Creates pair with string and frequency
-            pair<string, int> pair1;
-            pair1.first = prefix + node->getVal();
-            pair1.second = node->getFreq();
+            pair<string, int>* pair1 = new pair<string, int>();
+            pair1->first = prefix + node->getVal();
+            pair1->second = node->getFreq();
             // Pushes the pair into the queue
-            queue->push(&pair1);
-            cout << queue->top()->first << "Q TOP" << endl;
-            cout << queue->top()->second << "Q TOP" << endl;
-            queue->pop();
+            queue->push(pair1);
+            //    cout << queue->top()->first << " Q TOP" << endl;
+            //  cout << queue->top()->second << " Q TOP" << endl;
+            // queue->pop();
         }
         // If going down, then it includes the character and continues
         // traversing
@@ -252,16 +252,22 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         pair1.second = node->getFreq();
         queue->push(&pair1);
     }
-    // Uses helper method to find all words that include the prefix
+    // Uses helper method to find all words that include
+    // the prefix and pushes to queue
     traversal(node->middle, prefix);
     vector<string> result;
     cout << queue->size() << "SIZE" << endl;
-
+    // Manual check to see top of queue values
+    while (!queue->empty()) {
+        cout << queue->top()->first << "String" << endl;
+        cout << queue->top()->second << "Freq" << endl;
+        queue->pop();
+    }
     // Loops and inserts strings from greatest priority
-    /*  while (result.size() < numCompletions) {
-          result.push_back((queue->top()->first));
-          queue->pop();
-      }*/
+    /* while (result.size() < numCompletions) {
+         result.push_back((queue->top()->first));
+         queue->pop();
+     }*/
     return result;
 }
 

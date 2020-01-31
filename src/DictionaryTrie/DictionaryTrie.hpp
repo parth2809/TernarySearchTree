@@ -48,11 +48,11 @@ struct Tcompare {
     bool operator()(pair<string, int>* w1, pair<string, int>* w2) const {
         // Frequencies not equal
         if (w1->second != w2->second) {
-            // Checks if second frequency is greater
-            return w1->second > w2->second;
+            // Checks if first frequency is greater
+            return w1->second < w2->second;
         }
-        // Checks if second string is greater
-        return w1->first > w2->first;
+        // Checks if first string is greater
+        return w1->first < w2->first;
     }
 };
 typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,
