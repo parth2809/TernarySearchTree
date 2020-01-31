@@ -43,5 +43,6 @@ TEST(DictTrieTests, TEST_1) {
     ASSERT_TRUE(dict.find("foody"));
     ASSERT_TRUE(dict.find("a"));
     ASSERT_FALSE(dict.find("momyss"));
+    vector<string> result2 = dict.predictCompletions("foo", 5);
 }
 /* TODO */

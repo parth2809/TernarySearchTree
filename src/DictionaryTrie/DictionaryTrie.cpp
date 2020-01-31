@@ -224,9 +224,6 @@ void DictionaryTrie::traversal(TrieNode* node, string prefix) {
             pair1->second = node->getFreq();
             // Pushes the pair into the queue
             queue->push(pair1);
-            //    cout << queue->top()->first << " Q TOP" << endl;
-            //  cout << queue->top()->second << " Q TOP" << endl;
-            // queue->pop();
         }
         // If going down, then it includes the character and continues
         // traversing
@@ -267,6 +264,9 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         result.push_back((queue->top()->first));
         queue->pop();
     }
+    while (!queue->empty()) {
+        queue->pop();
+    }
     return result;
 }
 
@@ -277,4 +277,14 @@ std::vector<string> DictionaryTrie::predictUnderscores(
 }
 
 /* TODO */
-DictionaryTrie::~DictionaryTrie() {}
+DictionaryTrie::~DictionaryTrie() { deleteAll(root); }
+
+void DictionaryTrie::deleteAll(TrieNode* n) {
+    if (n == nullptr) {
+        return;
+    }
+    deleteAll(n->left);
+    deleteAll(n->middle);
+    deleteAll(n->right);
+    delete (n);
+}

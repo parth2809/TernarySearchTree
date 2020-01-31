@@ -89,6 +89,8 @@ class DictionaryTrie {
 
     /* TODO: add function header */
     ~DictionaryTrie();
+
+    void deleteAll(TrieNode* n);
 };
 
 #endif  // DICTIONARY_TRIE_HPP
