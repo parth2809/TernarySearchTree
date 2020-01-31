@@ -1,24 +1,14 @@
-Reading file: data/dictionary.txt
+Reading file: data/short_dict.txt
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-!!!
-!!a
-Continue? (y/n)
-Enter a prefix/pattern to search for:
-Enter a number of completions:
-55
-Continue? (y/n)
-Enter a prefix/pattern to search for:
-Enter a number of completions:
-$$0b
-$$$$0
-$0b
-Continue? (y/n)
-Enter a prefix/pattern to search for:
-Enter a number of completions:
-(!@&#
-Continue? (y/n)
-Enter a prefix/pattern to search for:
-Enter a number of completions:
-aAa
+a
+a big
+a bit
+a better
+a bad
+a book
+a black
+a baby
+a bit of
+a beautiful
 Continue? (y/n)
