@@ -253,7 +253,6 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
     // the prefix and pushes to queue
     traversal(node->middle, prefix);
     vector<string> result;
-    vector<pair<string, int>*> gone;
     // Loops and inserts strings from greatest priority
     while (result.size() < numCompletions) {
         // Num completions greater than queue size
@@ -261,9 +260,10 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
             break;
         }
         pair<string, int>* hold = queue->top();
-        result.push_back(hold->first);
+        string store = hold->first;
+        result.push_back(store);
         queue->pop();
-        // delete (hold);
+        delete (hold);
     }
     while (!queue->empty()) {
         pair<string, int>* hold = (queue->top());
