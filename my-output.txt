@@ -1,0 +1,13 @@
+Running main() from ../subprojects/googletest-release-1.8.1/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 2 tests from DictTrieTests
+[ RUN      ] DictTrieTests.EMPTY_TEST
+[       OK ] DictTrieTests.EMPTY_TEST (0 ms)
+[ RUN      ] DictTrieTests.TEST_1
+[       OK ] DictTrieTests.TEST_1 (1 ms)
+[----------] 2 tests from DictTrieTests (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test case ran. (1 ms total)
+[  PASSED  ] 2 tests.

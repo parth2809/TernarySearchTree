@@ -263,7 +263,7 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         string store = hold->first;
         result.push_back(store);
         queue->pop();
-        delete (hold);
+        // delete (hold);
     }
     while (!queue->empty()) {
         pair<string, int>* hold = (queue->top());
