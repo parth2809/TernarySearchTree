@@ -265,10 +265,14 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         if (queue->size() == 0) {
             break;
         }
-        result.push_back((queue->top()->first));
+        pair<string, int>* hold = queue->top();
+        result.push_back(hold->first);
+        delete (hold);
         queue->pop();
     }
     while (!queue->empty()) {
+        pair<string, int>* hold = (queue->top());
+        delete (hold);
         queue->pop();
     }
     return result;
@@ -281,7 +285,10 @@ std::vector<string> DictionaryTrie::predictUnderscores(
 }
 
 /* TODO */
-DictionaryTrie::~DictionaryTrie() { deleteAll(root); }
+DictionaryTrie::~DictionaryTrie() {
+    deleteAll(root);
+    delete queue;
+}
 
 void DictionaryTrie::deleteAll(TrieNode* n) {
     if (n == nullptr) {
