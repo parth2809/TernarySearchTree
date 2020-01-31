@@ -11,7 +11,7 @@
 using namespace std;
 
 typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,
-                            compare>
+                            Tcompare>
     pq;
 /* TODO */
 DictionaryTrie::DictionaryTrie() : root(nullptr), treeSize(0), treeHeight() {}
@@ -210,14 +210,15 @@ TrieNode* DictionaryTrie::findNode(string word) const {
     }
 }
 
-TrieNode* DictionaryTrie::traversal(TrieNode* node, string prefix,
-                                    pq* queue) const {
+void DictionaryTrie::traversal(TrieNode* node, string prefix, pq* queue) const {
     if (node != nullptr) {
         traversal(node->left, prefix, queue);
         // Found a word, then creates a pair and adds to priority queue
         if (node->getFinalLetter() == true) {
-            string newString = prefix + node->getVal();
-            queue->push(&make_pair(prefix, node->getFreq()));
+            pair<string, int> pair1;
+            pair1.first = prefix;
+            pair1.second = node->getFreq();
+            queue->push(&pair1);
         }
         // If going down, then it includes the character and continues
         // traversing
@@ -231,10 +232,17 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
                                                   unsigned int numCompletions) {
     // Finds end node of input prefix
     TrieNode* node = findNode(prefix);
+    if (node == nullptr) {
+        vector<string> empty;
+        return empty;
+    }
     pq queue;
     // Prefix itself is a word
     if (node->getFinalLetter() == true) {
-        queue.push(&make_pair(prefix, node->getFreq()));
+        pair<string, int> pair1;
+        pair1.first = prefix;
+        pair1.second = node->getFreq();
+        queue.push(&pair1);
     }
     // Uses helper method to find all words that include the prefix
     traversal(node, prefix, &queue);

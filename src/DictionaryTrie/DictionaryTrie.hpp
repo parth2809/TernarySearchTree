@@ -44,6 +44,17 @@ class TrieNode {
     bool getFinalLetter() { return endWord; }
 };
 
+struct Tcompare {
+    bool operator()(pair<string, int>* w1, pair<string, int>* w2) const {
+        if (w1->second != w2->second) {
+            return w1->second < w2->second;
+        }
+        return w1->first < w2->first;
+    }
+};
+typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,
+                            Tcompare>
+    pq;
 class DictionaryTrie {
   private:
     TrieNode* root;
@@ -59,8 +70,7 @@ class DictionaryTrie {
 
     TrieNode* findNode(string word) const;
 
-    TrieNode* DictionaryTrie::traversal(TrieNode* node, string prefix,
-                                        pq* queue) const;
+    void traversal(TrieNode* node, string prefix, pq* queue) const;
 
     /* TODO: add function header */
     bool find(string word) const;
@@ -77,15 +87,4 @@ class DictionaryTrie {
     ~DictionaryTrie();
 };
 
-struct compare {
-    bool operator()(pair<string, int>* w1, pair<string, int>* w2) const {
-        if (w1->second != w2->second) {
-            return w1->second < w2->second;
-        }
-        return w1->first < w2->first;
-    }
-};
-typedef std::priority_queue<pair<string, int>*, vector<pair<string, int>*>,
-                            compare>
-    pq;
 #endif  // DICTIONARY_TRIE_HPP
