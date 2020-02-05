@@ -2,23 +2,23 @@
 Loading dictionary...
 
 Test 1: prefix = "iterating through alphabet", numCompletions = 10
-	Time taken: 644699078 nanoseconds.
+	Time taken: 577747560 nanoseconds.
 	Results found: 260
 
 Test 2: prefix = "a", numCompletions = 10
-	Time taken: 75782929 nanoseconds.
+	Time taken: 73240423 nanoseconds.
 	Results found: 10
 
 Test 3: prefix= "the", numCompletions = 10
-	Time taken: 48955328 nanoseconds.
+	Time taken: 53394239 nanoseconds.
 	Results found: 10
 
 Test 4: prefix= "app", numCompletions = 10
-	Time taken: 873270 nanoseconds.
+	Time taken: 1035910 nanoseconds.
 	Results found: 10
 
 Test 5: prefix= "man", numCompletions = 10
-	Time taken: 1406343 nanoseconds.
+	Time taken: 1908148 nanoseconds.
 	Results found: 10
 
 Would you like to run additional tests? (y/n) 

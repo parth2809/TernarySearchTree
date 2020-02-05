@@ -235,35 +235,35 @@ void DictionaryTrie::traversal(TrieNode* node, string prefix,
                 // Pushes the pair into the queue
                 queue->push(pair1);
             } else {
-                pair<string, int>* pair1 = new pair<string, int>();
-                int value = node->getFreq();
-                pair1->first = prefix + node->getVal();
-                pair1->second = value;
-                // Pushes the pair into the queue
-                queue->push(pair1);
-                pair<string, int>* hold = queue->top();
-                queue->pop();
-                delete (hold);
+                /* pair<string, int>* pair1 = new pair<string, int>();
+                 int value = node->getFreq();
+                 pair1->first = prefix + node->getVal();
+                 pair1->second = value;
+                 // Pushes the pair into the queue
+                 queue->push(pair1);
+                 pair<string, int>* hold = queue->top();
+                 queue->pop();
+                 delete (hold);*/
                 // Current node greater than min freq in queue
-                /*   if (node->getFreq() > queue->top()->second) {
-                       pair<string, int>* pair1 = new pair<string, int>();
-                       pair1->first = prefix + node->getVal();
-                       pair1->second = node->getFreq();
-                       pair<string, int>* hold = queue->top();
-                       queue->pop();
-                       delete (hold);
-                       queue->push(pair1);
-                   } else if (node->getFreq() == queue->top()->second) {
-                       if ((prefix + node->getVal()) > queue->top()->first) {
-                           pair<string, int>* pair1 = new pair<string, int>();
-                           pair1->first = prefix + node->getVal();
-                           pair1->second = node->getFreq();
-                           pair<string, int>* hold = queue->top();
-                           queue->pop();
-                           delete (hold);
-                           queue->push(pair1);
-                       }
-                   }*/
+                if (node->getFreq() > queue->top()->second) {
+                    pair<string, int>* pair1 = new pair<string, int>();
+                    pair1->first = prefix + node->getVal();
+                    pair1->second = node->getFreq();
+                    queue->push(pair1);
+                    pair<string, int>* hold = queue->top();
+                    queue->pop();
+                    delete (hold);
+                } else if (node->getFreq() == queue->top()->second) {
+                    if ((prefix + node->getVal()) > queue->top()->first) {
+                        pair<string, int>* pair1 = new pair<string, int>();
+                        pair1->first = prefix + node->getVal();
+                        pair1->second = node->getFreq();
+                        queue->push(pair1);
+                        pair<string, int>* hold = queue->top();
+                        queue->pop();
+                        delete (hold);
+                    }
+                }
             }
         }
 
