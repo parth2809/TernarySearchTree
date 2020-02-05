@@ -1,90 +1,1891 @@
-Reading file: data/unique_freq_dict.txt
+Reading file: data/large_freq_dict.txt
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-anyone
-arrive
-assume
-active
-advice
-accuse
-awhile
-assure
-advise
-abduce
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-limed
-limen
-limey
-limes
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-glime
-slime
-clime
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-always
-around
-almost
-across
-appear
-action
-anyone
-author
-agency
-answer
+a big part of
+a big problem
+a big party
+a big push
+a big pile of
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-grampa
-camera
-brenda
-olivia
-bianca
-monica
-amanda
-helena
-salvia
-samara
+abuse
+abandon
+abandoned
+abmho
+abyes
+abakas
+abater
+abelia
+abolla
+aboves
+abseil
+abbotcy
+abiosis
+abjurer
+ablates
+abraded
+abroach
+abutted
+abbacies
+abdomina
+abelmosk
+ablation
+abrading
+abusable
+abashment
+abattoirs
+abhorring
+about your
+abnegated
+abnormals
+aboiteaux
+about him
+abruptions
+absconding
+absorbancy
+abstracter
+abstrusest
+absurdists
+abbey
+abjurations
+aboriginals
+abridgments
+absorptions
+abusiveness
+absorptances
+absurdnesses
+absorbability
+about being
+absent
+abducted
+abort
+abolition
+about its
+abiding
+about a year
+about ten
+about the size of
+about in the
+about how much
+about such
+about each
+ablest
+abandoned the
+about how they
+abandon the
+about a dozen
+abs
+about himself
+abhorrence
+abend
+able to help
+absorb the
+about race
+about the need
+about the economy
+about whether or not
+able to come
+about the only
+abate
+about each other
+about two weeks
+about a year ago
+about someone
+about the man
+about a man
+able to walk
+about sexual
+about to take
+able to read
+abstained
+abuse is
+about nothing
+about are
+about religion
+about something that
+able to live
+about it as
+about his life
+about to become
+absolutely true
+above your
+abortion issue
+abuser
+about whom
+abso
+about crime
+above her head
+about personal
+about clinton
+about it for a
+about so
+about whether he
+able to learn
+about their lives
+about the human
+abstractions
+about safety
+about the latest
+able to offer
+about the old
+about a little
+about certain
+about the effect
+about to have
+about them and
+above its
+abandoned her
+abuse that
+absorbing the
+about my own
+about the baby
+about in a
+about gender
+about college
+able to do so
+about all those
+able to make the
+about her father
+about a month ago
+abandon his
+about getting the
+about twelve
+able to manage
+ability level
+abu ghraib prison
+about what this
+about the social
+about his mother
+about him in
+about to lose
+about technology
+about to ask
+abandon its
+about new york
+abdullah
+able to deliver
+abdominal pain
+about to find
+about energy
+about sixty
+about values
+ability to maintain
+about a few
+about what people
+abs and
+about their work
+about the show
+about where you
+above or below
+able to participate
+about his future
+about no
+about asking
+about girls
+about the power of
+about the politics
+abortion or
+about that a
+abuse as
+abortion on
+about what it is
+about your life
+about their future
+about the effectiveness
+about the effect of
+about the fact that the
+about investing
+aborigines
+about half as
+about president bush
+abolished the
+about the extent of
+about the very
+about foreign policy
+about his business
+about native
+about the drug
+about four years ago
+absolute certainty
+about halfway through
+about the content
+about who we
+abjured
+able to ask
+about civil
+about the film
+about the girl
+about russia
+about the car
+absolutely do
+abandon her
+about as far as
+above the earth
+about that as
+about past
+about five times
+about two weeks ago
+about people who are
+about the possibilities
+about richard
+about a week ago
+about contemporary
+about japan
+about sarah
+about this country
+abilities of the
+able to count
+about his personal
+about ideas
+about this a
+about whether this
+abuses that
+aback by the
+about the existence of
+above the floor
+ability to influence
+about in this
+about the growing
+ability to raise
+about poverty
+about the police
+about returning
+about the coming
+able to vote
+about improving
+about one another
+about the truth
+above a whisper
+about it if
+about the present
+about golf
+about the many
+ability to achieve
+about three days
+about the campaign
+about finding a
+able to address
+about the press
+abuse problems
+abstraction and
+able to purchase
+about ending
+about what to do with
+absolutely agree
+able to join
+about why you
+ability to survive
+able to match
+abramoff and
+about the extent to which
+about some things
+absorb a
+about why we
+about a decade ago
+about the progress
+about them that
+about to take a
+about every other
+about the difficulty
+about the price of
+about what happens to
+about increasing
+about eight months
+about is how
+about sexual harassment
+about steve
+abscess
+about the local
+about who we are
+ability to win
+about alternative
+about chinese
+abrir
+able to contain
+able to discuss
+about what you do
+about seven or
+abandoned building
+abandoning his
+able to earn
+about a fifth of
+about issues of
+abundances of
+able to do is
+about a book
+about to step
+able to focus on
+about a problem
+about his ability to
+about training
+ability to predict
+about female
+about once every
+about four miles
+about a year later
+about the fact that they
+about the way you
+about whether or not the
+abridging
+abused as a
+able to go on
+about henry
+about information
+about three hundred
+absolute minimum
+about clothes
+about retiring
+about the type
+about who would
+above the poverty
+about his plans
+about the risk of
+absolute numbers
+about black people
+about environmental issues
+about expanding
+about his first
+about my wife
+about things that are
+about domestic violence
+about this question
+about the prospects of
+ability to apply
+able to get that
+about being in the
+about medicine
+about science and
+about traditional
+about half of what
+about half the size
+about it because i
+about the same as the
+about most of
+about replacing
+about the overall
+about the red
+abondante
+abortion laws
+about traveling
+about what he said
+about will
+about her past
+about what we are
+able to grasp
+about of
+about the wedding
+about the world and
+about this whole thing
+above the town
+absolutely impossible
+abu ghraib and
+abilities as a
+about are the
+absorption of the
+able to cross
+about how bad
+about the reasons for
+about the small
+about those people
+able to go into
+about drug use
+about the best way to
+about how long it
+about moving to
+about three weeks ago
+abc news in
+able to determine the
+able to find it
+able to make that
+aboriginal culture
+about a single
+about light
+about something you
+about the treatment of
+about those two
+above all in
+absolute number
+about jewish
+about not getting
+about the appropriateness
+above the sea
+abundance is
+able to get on
+about family and
+about it over
+about to go into
+abused as a child
+about continuing
+about the larger
+about the planet
+about the reality of
+about the relation
+about what she was
+about what you can
+abuse as a
+able to assist
+about george w
+about her children
+about that issue
+about the connection between
+about twice a
+abandoned after
+about companies
+about two thirds of
+able to practice
+about cases
+about may
+able to take it
+about life and death
+about the assassination
+about the top
+about walter
+about war and
+about whether or not to
+abortion are
+abortion rate
+about in my
+about the environment and
+about the world of
+about this from
+about value
+about a year before
+about eliminating
+about elizabeth
+about that very
+about the appropriate
+about the large
+about the spread
+abhorrence of
+able to provide for
+about eight or nine
+ability to reduce
+able to balance
+able to monitor
+about hitler
+about reagan
+about the last time
+abuses are
+ability to monitor
+about his time
+about matt
+about six times
+about that right
+about the governor
+about the possibilities of
+about this sort
+about what they have
+about when i was
+absolutely brilliant
+able to help them
+aboard their
+about onehalf of
+about rights
+about that point
+about the crash
+about the woman who
+about both of
+about osama
+about right and
+about the central
+about the likelihood of
+about the new york
+about what happened that
+ability to share
+able to reach the
+about kennedy
+about microsoft
+about six to
+about the joys
+about the problems that
+about the trade
+about to hang
+about what they can
+abuse crisis
+abbeville
+abdul amir
+ability to negotiate
+able to replicate
+abortion case
+about it and we
+about it when you
+about the care
+about the late
+about the religious
+about the return
+about their family
+above the others
+absences from
+abandoned this
+abortions in the
+about these days
+about three million
+about why this
+ability of people
+able to design
+abortion coverage
+about as far from
+about covering
+about greed
+about it first
+about the peace
+about the spiritual
+absent fathers
+able to come in
+able to distinguish between
+able to get him
+able to reproduce
+about a minute and a
+about designing
+about fame
+about having children
+about his condition
+about mrs clinton
+about suffering
+about the current state
+about the current state of
+about the fact that this
+about the issues of
+about the parents
+about things i
+about to shoot
+abortion procedure
+about caring for
+about problems with
+about something in
+about the mysterious
+about them all
+abstraction to
+able to extend
+able to get her
+able to interact
+able to launch
+about how i was
+about policies
+about ten percent
+about the theory
+about three percent
+about threefourths
+about what they say
+ability to measure
+able to benefit from
+about access to
+about being in a
+about crossing
+about that part of
+about the dynamics
+about the fundamental
+about them with
+about this report
+above other
+above the line
+absolutely anything
+abstinent at
+able to carry on
+able to integrate
+about an incident
+about country
+about one minute
+about one of those
+about strategy
+about that sort of
+above the road
+abraham was
+ability to understand and
+able to achieve the
+about anything other
+about competing
+about fred
+about ideology
+about just a
+about lifting
+about the terms
+about their role
+about to stop
+above the surrounding
+abe said
+able to establish a
+able to keep a
+able to settle
+about and how
+about as bad as
+about her life and
+about seven hours
+about the beginning
+about the fish
+about the hair
+about the jewish
+about the link between
+about this world
+about tradition
+about violence and
+about what time
+about who can
+about wild
+absorption is
+able to answer the
+able to figure out how
+able to look back
+about characters
+about gangs
+about how and why
+about peace and
+about waking
+about what i would
+above ground level
+absolute freedom
+absolutely would
+ability to participate in
+able to work in
+abortions that
+about anger
+about identifying
+about mental health
+about nafta
+about the composition
+about the scandal
+about things you
+about unity
+about what is the
+abandonnae
+able to deal with it
+about anything except
+about blowing
+about capitalism
+about debt
+about five minutes to
+about forty years
+about his children
+about jesus and
+about onefourth of the
+about self
+about something called
+about terrorists
+about those kinds of
+about to finish
+about to sign
+above the valley
+abasement
+abbas to
+abide by it
+able to account
+able to make decisions
+able to tie
+about being gay
+about four or five years
+about it either
+about lesbians
+about revealing
+about still
+about the arab
+about the band
+about the relationships between
+about the viability of
+about their attitudes
+absolutely do not
+abide by the law
+able to isolate
+about a cup
+about recruiting
+about the outside
+about the piece
+about what needs to
+abundant wildlife
+abc news coverage
+able to access the
+able to resist the
+able to see my
+about an eighth
+about being at
+about folks
+about my career
+about potentially
+about the camp
+about the soviet union
+about their financial
+about this type of
+about trying to find
+above the tree
+abusers are
+able to achieve a
+about a lot more
+about her all
+about how little
+about negotiating
+about that man
+about the increase
+about the pros and
+about the story of
+about this race
+about to begin a
+about to read
+about whether this is
+about wilson
+absolute and relative
+absolute nonsense
+ability to implement
+ability to influence the
+ability to manage the
+able to solve the
+able to tackle
+abortion rights supporters
+about dick cheney
+about geography
+about hundreds
+about nuclear power
+about sexuality and
+about somalia
+about the advantages of
+about the fighting
+about the years
+about whether or not there
+above tree
+absence of strong
+abducted by a
+abdullah abdullah
+ability to quickly
+about everyone who
+about groups
+about him all the
+about his wife and
+about houston
+about including
+about such an
+about the agreement
+about the apparent
+about thousands of
+abuse and dependence
+ability to maintain a
+ability to save
+able to interview
+able to make it to
+able to not
+able to stand on
+able to survive the
+aboriginal rights
+about charges
+about clarence thomas
+about each of the
+about forty minutes
+about onethird of all
+about osteoporosis
+about the beginning of
+about the case and
+about the products
+about to pay
+about what those
+above the altar
+above town
+absolutely could
+ability were
+able to take in
+about a piece
+about among
+about child abuse
+about freedom and
+about hundreds of
+about my life and
+about she
+about that in a minute
+about the feasibility
+about the morning
+about the record
+about the rescue
+about the side
+about twenty yards
+about what constitutes a
+about what needs to be
+about what people think
+about what they are doing
+about whether the president
+absolutely sure of
+ability to combine
+ability to throw
+able to do in the
+able to get back to
+able to get one
+able to introduce
+able to withdraw
+about ray
+about tactics
+about teens
+about the convention
+about the israeli
+about the property
+about ufos
+absolutely love it
+absorbed from the
+ability to raise money
+able to comply
+able to summon
+abortion had
+abortion were
+about a hundred miles
+about all of this is
+about clinton and
+about how an
+about how quickly
+about in the past
+about jerusalem
+about spending the
+about the crimes
+about the evening
+about the ideas
+about the opportunity to
+about the precise
+about vampires
+about whether it is
+above the snow
+abuses to
+abc news in new
+ability for the
+able to make sure
+able to reconcile
+able to say i
+able to see this
+able to swim
+aborted the
+about a dream
+about a number of things
+about each one
+about human rights and
+about hunger
+about inch
+about mental illness
+about real people
+about sacrifice
+about security and
+about the cases
+about the content of the
+about the novel
+about this on the
+abruptly resigned
+abstract sense
+abuse she
+able not only
+able to switch
+abolitionist movement
+about a nice
+about asia
+about being too
+about bruce
+about capital punishment
+about classical
+about expanding the
+about letting the
+about people of
+about that woman
+about the clothes
+about the same percentage
+about the width
+about the will
+about their chances
+about threequarters of a
+about tracking
+about working on
+about your weight
+absolutely hate
+absolutely true that
+abu abbas
+abuse at columbia
+abuser and
+abbreviated as
+abc news saturday
+able to repeat
+about a half dozen
+about a halfinch
+about a young girl
+about alan
+about anne
+about cell
+about its history
+about making that
+about saudi arabia
+about sex or
+about taking it
+about the fine
+about the perfect
+above her left
+absence for
+abd alrahman
+able to cope with the
+able to see their
+about ann
+about four miles from
+about heading
+about his affair
+about jones
+about michigan
+about next week
+about one mile
+about philosophy
+about teamwork
+about the creative
+about the violent
+about to the
+about well
+about what is right
+about what she said
+about what they should
+above the rest of the
+above the top of
+above zero
+absent some
+absolutely do nt
+abuse would
+abandoned farm
+ability conceptions
+ability of any
+ability to manipulate the
+ability to strike
+able to do to
+able to hang on
+about everyone in the
+about her boyfriend
+about him that he
+about his desire
+about his relationship with monica
+about new hampshire
+about not only the
+about other issues
+about syria
+about that anymore
+about the note
+about the standards
+about the un
+about this same
+about to graduate from
+about to use
+about victor
+about whom i
+above average for
+above the desert
+absolutely an
+absolutely are
+able to counter
+able to fool
+able to wait
+about a similar
+about company
+about dennis
+about getting a job
+about having their
+about her latest
+about how nice
+about our families
+about pesticides
+about presidents
+about the serious
+about the taxes
+about the things you
+about the workers
+about them from
+about them in a
+about this all the
+about this are
+above inflation
+absorb some of the
+abundance for
+abc braille study
+abdul rahim
+abetting a
+abilities have
+ability to realize
+ability to spot
+able to answer that
+able to guess
+able to move in
+abortions as
+about a foot long
+about anything like
+about anything we
+about crime in
+about getting an
+about his old
+about it when they
+about methods
+about regional
+about something that you
+about stopping the
+about that which
+about the hurricane
+about the longterm effects
+about the persian gulf
+about their medical
+about this change
+about this issue and
+about three weeks before
+about what do
+about whether and
+above ground and
+above the threshold
+abridged version of
+absence on
+abilities by
+ability to cope with the
+able to bring it
+able to explain why
+able to maintain its
+able to read it
+able to review
+able to tell what
+about a hundred people
+about all his
+about cops
+about election
+about fifty percent
+about george washington
+about her book
+about her favorite
+about her from
+about his dream
+about how the united states
+about most things
+about myself that
+about running out
+about the complexity
+about the discipline
+about the function
+about the joy of
+about the massive
+about the mystery of
+about the responsibility of
+about the same as it
+about the six
+about the violence in
+about the western
+about toys
+about tying
+about whether we should
+about your car
+above his eyes
+above passage
+absolutely essential to the
+absolutely nothing wrong with
+abuse at abu
+abuse reports
+abbey and
+ability to test
+able to compensate for
+able to do is to
+able to learn the
+able to move into
+abolished slavery
+aboriginal community
+about aesthetics
+about an interview
+about as low as
+about for so
+about her grandmother
+about his mother and
+about his place in
+about irish
+about it as i
+about it does
+about leo
+about lower
+about one foot
+about regime
+about samuel
+about sandy
+about the conditions of
+about the design of
+about the integration
+about the list
+about the only place
+about the policies
+about the study and
+about their place
+about three weeks later
+about unfair
+about were the
+about what they call
+above had
+above the field
+absent an
+absolutely all
+absorbed with the
+abundantly clear to
+abysmally low
+ab and
+aback by her
+aback by this
+abandoning me
+abiding citizens
+ability of governments
+ability to predict the
+able to comprehend the
+able to discriminate
+able to rent
+able to reveal
+able to sit in
+abortion and homosexuality
+about a million people
+about a process
+about a stock
+about a study
+about a teacher
+about a year ago when
+about accounting
+about banking
+about beautiful
+about bombing
+about cracking
+about gender roles
+about going out and
+about half that of
+about half were
+about his use
+about house
+about how they have
+about it and say
+about it in your
+about it they
+about layoffs
+about miracles
+about my old
+about packing
+about relationships and
+about sea
+about the means
+about the nba
+about the telephone
+about three months to
+about three thousand
+about who we are and
+above indicate
+above the canopy
+above the deck
+absorb nutrients
+abstract way
+abdomen with
+ability to compete in the
+ability to develop and
+able to prove it
+able to take some
+abortionrights advocates
+about a lot of people
+about cable
+about estate
+about explaining
+about four times the
+about how he and
+about involving
+about jeffrey
+about korea
+about limited
+about the civil rights movement
+about the essence of
+about the new world
+about the whole idea
+about three quarters of the
+about total
+about what she was doing
+abroad of
+absently and
+absentminded professor
+absorb excess
+absurd it
+abusers who
+abandoning our
+able to be on
+able to show you
+about a high school
+about an issue that
+about endoflife
+about greenhouse
+about how and where
+about it in the morning
+about onetenth of the
+about ourselves and our
+about rebecca
+about ruth
+about scd
+about sugar
+about sweet
+about the future in
+about the production of
+about the transfer of
+about van
+about what he might
+about what it is to
+above five
+absorbs moisture
+ability of the government
+able to catch the
+able to create the
+able to deliver on
+able to let go of
+about a balanced budget
+about a sense of
+about as much chance
+about the intricacies of
+about the relations between
+about the utility of
+about what i can
+about what i saw
+about which there is
+about who was the
+abide by the same
+ability as well as
+able to accomplish in
+able to do my
+able to get close
+able to walk and
+about a gallon of
+about a thousand years
+about all this and
+about as easy as
+about being a father
+about everything under the
+about his plan to
+about the book is
+about the nature of human
+about the place and
+about the threat to
+about this for a moment
+about to enter a nospin
+about what they will
+about who is the
+abuse of power by
+able to add to
+able to experience the
+able to explain how
+able to get what
+able to lead the
+able to perform a
+able to walk again
+about a half a dozen
+about a subject that
+about all sorts of things
+about anything you want
+about being at the
+about gays in the military
+about half a mile from
+about having to go
+about him because he
+about human rights abuses
+about it and to
+about nine or ten
+about the arrival of
+about the killing of
+about the possibility that the
+about the sale of
+about the state of their
+about this and he
+about this for a while
+about to take over
+about two hundred and
+absence of any real
+absolute values of the
+able to call on
+able to compete in the
+able to hear you
+able to keep track
+about a mile away from
+about a set of
+about being a woman
+about black and white
+about buying a new
+about four months after
+about his commitment to
+about how the war
+about how well they
+about how you are
+about it at a
+about the breakdown of
+about the flat tax
+about the founding of
+about the fragility of
+about the other things
+about twice as likely
+about two hours to
+about what he wants to
+about working with the
+about your own life
+above the valley floor
+above those of the
+abuse of iraqi prisoners
+ability to laugh at
+ability to make people
+able to answer questions
+able to meet their
+able to react to
+able to say that the
+about being a mother
+about change in the
+about half a minute
+about him and what
+about how the two
+about it for weeks
+about it in our
+about it right away
+about the environmental impact
+about the future as
+about the influence of the
+about the money and
+about the progress of the
+about the royal family
+about their bodies and
+about this is a
+about what happened to your
+about what they thought
+about where and how
+about whether they have
+absolutely no reason why
+ability to maintain the
+able to answer the question
+able to appeal to
+able to bear the
+able to come into
+able to interpret the
+able to recall the
+able to write about
+aboriginal culture and heritage
+about a mile or
+about a situation where
+about all the good
+about for so long
+about going out to
+about her is that she
+about her that i
+about how the city
+about jobs and the
+about playing in the
+about problems in the
+about the good life
+about the issue that
+about the kingdom of
+about the situation at
+about the theory that
+about the universe and
+about this at the
+about to find out if
+about to launch into
+about to say something else
+about whether this is a
+above the town of
+abc news special report
+ability to take care of
+able to become a
+able to do something that
+able to embrace the
+able to lift the
+able to use to
+able to walk the
+about a day and a
+about a foot tall
+about a hundred years ago
+about a young woman who
+about getting into a
+about having a child
+about his own personal
+about how the company
+about it as an
+about it is that i
+about new letters to
+about that because that
+about the book that
+about the conditions under which
+about the different types of
+about the electoral college
+about the fear of
+about the growing number
+about the preservation of
+about the rate of
+about the role and
+about the situation that
+about their role in the
+about things such as
+about this and we
+about twothirds of them
+about twothirds of those
+about what they eat
+about where to find
+absorb a lot of
+abuse of the system
+abe charitable gift fund
+ability amidst daily demands
+ability to take advantage of
+ability to tell the
+able to build on
+able to convince him
+able to do both
+able to make sense
+able to shake off
+about a little over
+about a week or two
+about an hour outside
+about anything like that
+about as far as it
+about eight percent of
+about four or five times
+about how they feel about
+about in the next
+about is that you
+about it ahead of
+about it and there
+about it on this
+about my sex life
+about one thing that
+about that because we
+about that kind of stuff
+about the balance of
+about the business and
+about the conflict in
+about the reaction to
+about the risks associated with
+about the second half
+about the situation in iraq
+about the specifics of the
+about the unfairness of
+about their chances of
+about them and the
+about these kinds of things
+about threefourths of the
+about to make his
+about to walk out
+about what is expected
+about what it does
+about whether to use
+about whether you want
+about women who are
+absolutely right about the
+ability to act in
+able to afford their
+able to assume the
+able to benefit from the
+able to do it with
+able to do this because
+able to find my
+able to find only
+able to give that
+able to go ahead
+able to hear him
+able to make it work
+able to pay them
+able to speak to the
+able to use her
+able to work on the
+about a man who is
+about half an hour after
+about half as long
+about his vision for
+about how you feel about
+about how you should
+about me than i
+about one another and
+about six hours of
+about the course of the
+about the damage to
+about the mother of
+about the movie business
+about the perception of
+about the situation on
+about this place is
+about this whole situation
+about to get on
+about to marry a
+about to see if
+about trying to be
+about twice a month
+ability to communicate effectively
+ability to complete the
+ability to conduct a
+ability to get people
+ability to hit a
+ability to pay attention
+ability to perceive the
+ability to put together
+ability to respond to the
+ability to use language
+able to in the
+able to make something
+able to provide that
+able to take time
+able to tell them apart
+about all the places
+about all we can do
+about aspects of the
+about four hours before
+about her life and her
+about his conversation with
+about his new film
+about his plans for the
+about how he came
+about how he wants
+about how many people are
+about how this could
+about how we will
+about is trying to
+about it and thought
+about it in just
+about its effect on
+about one million people
+about people with disabilities
+about the boy who
+about the chance to
+about the first day
+about the importance of being
+about the importance of having
+about the issue in
+about the large number of
+about the leader of
+about the music they
+about the prospects for a
+about the son of
+about the sorts of
+about the value of a
+about their perceptions of the
+about three miles from the
+about to catch up
+about to come out of
+about to crash into
+about to give the
+about to give up the
+about wanting to have
+about what he could
+about what is needed
+about what you do nt
+about where i am
+about which they are
+abraham lincoln and the
+absence makes the heart
+absolutely nothing about the
+able to comply with the
+about a situation in which
+about a woman who was
+about any of the other
+about as much as it
+about people who have been
+about the future of america
+about the future of american
+about the whole issue of
+about to step into the
+about what happened in that
+about who you are and
+able to capitalize on the
+able to do it again
+able to get them out
+able to spend as much
+aboard the space shuttle discovery
+about a few of the
+about half of what it
+about his place in the
+about on a par with
+about that is that the
+about the change in the
+about the corrupting influence of
+about the fate of their
+about the night of the
+about the political implications of
+about the quality of education
+about the rise of the
+about their plans for the
+about things that are nt
+about to go through the
+about to tell you is
+about what she wanted to
+about what they do and
+about what you ca nt
+about what you would do
+above his head like a
+ability to bring people together
+ability to interact with the
+able to come and go
+able to control their own
+able to do anything for
+able to get anything done
+able to learn how to
+able to move on to
+about a dozen or so
+about a third as much
+about as subtle as a
+about as thick as a
+about growing up in a
+about how he did nt
+about how it should be
+about how much of a
+about how tough it is
+about me as a person
+about the content of their
+about the only thing you
+about the only time i
+about the problems with the
+about the same as they
+about the same height as
+about their lives and their
+about this book is that
+about to turn away when
+about what happened on the
+about what the american people
+about what they wanted to
+about whether or not these
+above entitled action find the
+above the bottom of the
+abridge the privileges or immunities
+abruptly as it had begun
+abc news special edition of
+abe to aid its charitable
+able to do so with
+able to tell the story
+about a year ago in
+about an inch from the
+about community college faculty members
+about having a good time
+about improving the quality of
+about sex all the time
+about the biology of the
+about the game and the
+about the gravity of the
+about the importance of religion
+about the middle east crisis
+about the passage of time
+about the question of the
+about the rest of my
+about the time that i
+about the way i looked
+about time you got here
+about to close the door
+about to meet a woman
+about what i could do
+ability to engage in the
+ability to keep track of
+ability to make things happen
+able and willing to pay
+able to be able to
+able to communicate with each
+able to do about it
+able to do in a
+able to fend off the
+able to get a few
+able to get in to
+able to get to know
+able to move the ball
+able to pick him out
+able to put it on
+able to stay at home
+able to take a look
+able to take the next
+able to work out the
+abode in the united kingdom
+abortion except in cases of
+about a group of young
+about a guy who has
+about a quarter of their
+about a year ago with
+about as far away as
+about at the top of
+about bill clinton and his
+about five years ago i
+about for a way to
+about four times a week
+about half the length of
+about how it feels to
+about in the united states
+about sarah palin with michael
+about that right after this
+about the causes of poverty
+about the chain of command
+about the consequences of what
+about the deleterious effects of
+about the effects of this
+about the man who was
+about the possibility of doing
+about the potential for a
+about the size of one
+about where you want to
+about you and your work
+absorbed through the skin and
+abc good morning america commercial
+abc news nightline town meeting
+ability to continue as a
+ability to gain access to
+ability to keep pace with
+ability to respond to a
+able to care for her
+able to do the right
+able to leap tall buildings
+able to live in a
+able to make it home
+able to make up the
+able to move beyond the
+able to read and understand
+able to survive in the
+able to tell if there
+able to tell me what
+able to walk up to
+aboard the space station mir
+about a block from the
+about a dozen of these
+about all of the other
+about as many people as
+about finding a way to
+about four in the afternoon
+about high crimes and misdemeanors
+about how he felt about
+about how he or she
+about how many people would
+about how much he loves
+about how they do nt
+about human rights abuses in
+about it a lot in
+about it and then i
+about it in front of
+about it is that he
+about me and my family
+about onethird of the time
+about running as an independent
+about six percent of the
+about the corruption of the
+about the downfall of the
+about the edge of the
+about the fact that our
+about the financial health of
+about the future is that
+about the growing gap between
+about the healing power of
+about the human condition and
+about the importance of preserving
+about the investigation into the
+about the last time i
+about the nature of knowledge
+about the nature of meaning
+about the nature of women
+about the order of the
+about the political nature of
+about the potential of the
+about the resolution of the
+about the response of the
+about the rich and famous
+about the sanctity of the
+about the self and the
+about the sources of the
+about the status of women
+about the sudden death of
+about the time i got
+about the way they look
+about things that are very
+about this whole idea of
+about three blocks from the
+about three hours after sunset
+about to embark on his
+about to enter a new
+about to give her a
+about to leave the country
+about two or three minutes
+about two weeks after i
+about wanting to be a
+about wanting to have a
+about what they would like
+about what we did in
+about what went wrong with
+about what you think the
+about where the money is
+about whether to go to
+absolutely no doubt that the
+absorbed in his own thoughts
+abandoned in the middle of
+ability to send and receive
+ability to use a variety
+ability to work in the
+able to add to the
+able to continue to work
+able to get close enough
+able to get to them
+able to give up the
+able to have a place
+able to home in on
+able to know how to
+able to make a deal
+able to pay the mortgage
+able to resolve the conflict
+able to see what was
+able to squeeze in a
+able to talk about that
+abolish the death penalty in
+abortion as a form of
+about a girl who was
+about a half inch of
+about a halfhour after the
+about a month after his
+about a new breed of
+about a new way of
+about a possible war with
+about a shift in the
+about a variety of subjects
+about an increase in the
+about everything else in the
+about five miles per hour
+about four miles north of
+about growing up on the
+about half a billion dollars
+about half the people in
+about half what it would
+about health care reform and
+about her experience as a
+about him an air of
+about his experiences as a
+about how and when to
+about how she had been
+about how to make sure
+about how we have to
+about it before it happened
+about it in the car
+about keeping up with the
+about law and order in
+about raising the retirement age
+about some of the big
+about the activities of the
+about the breakup of the
+about the circumstances in which
+about the decision by the
+about the economy and about
+about the implementation of the
+about the importance of early
+about the latest advances in
+about the longterm effect of
+about the most intimate details
+about the need to reduce
+about the plans for the
+about the same length as
+about the story is that
+about the successes and failures
+about the time of his
+about the veracity of the
+about the war in bosnia
+about their perception of the
+about this movie is that
+about three feet away from
+about three years ago the
+about to become even more
+about to get on the
+about to go off to
+about two weeks into the
+about what could happen to
+about what happened when the
+about what happens if the
+about what happens if you
+about what he had just
+about what was to come
+about who i was and
+about women and heart disease
+about world war ii and
+about you behind your back
+above the door of the
+absolutely no sense to me
+abuse and those who do
 Continue? (y/n)
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-people
-theres
-should
-really
-school
-become
-family
-theyre
-little
-always
-system
-before
-happen
-during
-number
-things
-mother
-groans
-doesnt
-around
-Continue? (y/n)
-Enter a prefix/pattern to search for:
-Enter a number of completions:
-ginning
-girning
-gowning
-gunning
-gaining
-Continue? (y/n)
-Enter a prefix/pattern to search for:
-Enter a number of completions:
-mutinying
-rumanians
-humankind
 Continue? (y/n)

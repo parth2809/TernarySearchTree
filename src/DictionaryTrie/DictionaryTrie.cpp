@@ -62,6 +62,7 @@ bool DictionaryTrie::insert(string word, unsigned int freq) {
         } else {
             if (position == word.length() - 1) {
                 node->setFinalLetter(true);
+                node->setFreq(freq);
                 return true;
             } else {
                 if (node->middle != nullptr) {
@@ -229,22 +230,43 @@ void DictionaryTrie::traversal(TrieNode* node, string prefix,
                 // Creates pair with string and frequency
                 pair<string, int>* pair1 = new pair<string, int>();
                 pair1->first = prefix + node->getVal();
-                pair1->second = node->getFreq();
+                int value = node->getFreq();
+                pair1->second = value;
                 // Pushes the pair into the queue
                 queue->push(pair1);
             } else {
+                pair<string, int>* pair1 = new pair<string, int>();
+                int value = node->getFreq();
+                pair1->first = prefix + node->getVal();
+                pair1->second = value;
+                // Pushes the pair into the queue
+                queue->push(pair1);
+                pair<string, int>* hold = queue->top();
+                queue->pop();
+                delete (hold);
                 // Current node greater than min freq in queue
-                if (node->getFreq() > queue->top()->second) {
-                    pair<string, int>* pair1 = new pair<string, int>();
-                    pair1->first = prefix + node->getVal();
-                    pair1->second = node->getFreq();
-                    pair<string, int>* hold = queue->top();
-                    queue->pop();
-                    delete (hold);
-                    queue->push(pair1);
-                }
+                /*   if (node->getFreq() > queue->top()->second) {
+                       pair<string, int>* pair1 = new pair<string, int>();
+                       pair1->first = prefix + node->getVal();
+                       pair1->second = node->getFreq();
+                       pair<string, int>* hold = queue->top();
+                       queue->pop();
+                       delete (hold);
+                       queue->push(pair1);
+                   } else if (node->getFreq() == queue->top()->second) {
+                       if ((prefix + node->getVal()) > queue->top()->first) {
+                           pair<string, int>* pair1 = new pair<string, int>();
+                           pair1->first = prefix + node->getVal();
+                           pair1->second = node->getFreq();
+                           pair<string, int>* hold = queue->top();
+                           queue->pop();
+                           delete (hold);
+                           queue->push(pair1);
+                       }
+                   }*/
             }
         }
+
         // If going down, then it includes the character and continues
         // traversing
         traversal(node->middle, prefix + node->getVal(), numCompletions);
