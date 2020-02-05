@@ -87,7 +87,7 @@ class DictionaryTrie {
     vector<string> predictUnderscores(string pattern,
                                       unsigned int numCompletions);
     void traversalLength(TrieNode* node, string word, int length);
-    bool recurse(string pattern, string word, int curIndex);
+    bool recurse(string pattern, string word);
     /* TODO: add function header */
     ~DictionaryTrie();
 

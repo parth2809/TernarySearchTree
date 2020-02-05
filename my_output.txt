@@ -1,3 +1,7 @@
-Reading file: data/short_dict.txt
+Reading file: data/unique_freq_dict.txt
 Enter a prefix/pattern to search for:
 Enter a number of completions:
+mutinying
+rumanians
+humankind
+Continue? (y/n)

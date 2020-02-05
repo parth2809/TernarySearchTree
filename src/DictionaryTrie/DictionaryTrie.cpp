@@ -213,6 +213,8 @@ TrieNode* DictionaryTrie::findNode(string word) const {
 }
 
 void DictionaryTrie::traversal(TrieNode* node, string prefix) {
+    // make queue up to size of numcompletions, then replace min with next one
+
     if (node != nullptr) {
         traversal(node->left, prefix);
 
@@ -288,7 +290,7 @@ std::vector<string> DictionaryTrie::predictUnderscores(
     // Now check words in queue that match the pattern
     while (!queue->empty() && finished.size() < numCompletions) {
         string word = queue->top()->first;
-        bool result = recurse(pattern, word, 0);
+        bool result = recurse(pattern, word);
         if (result == true) {
             // add to vector
             finished.push_back(word);
@@ -310,7 +312,7 @@ std::vector<string> DictionaryTrie::predictUnderscores(
 }
 // pushes all words with set length into queue starting from root
 void DictionaryTrie::traversalLength(TrieNode* node, string word, int length) {
-    if (word.length() > length) {
+    if (word.length() >= length) {
         return;
     }
     if (node != nullptr) {
@@ -333,18 +335,31 @@ void DictionaryTrie::traversalLength(TrieNode* node, string word, int length) {
     }
 }
 // word is pattern including the underscores
-bool DictionaryTrie::recurse(string pattern, string word, int curIndex) {
-    if (curIndex == pattern.length() - 1) {
-        return true;
+bool DictionaryTrie::recurse(string pattern, string word) {
+    bool flag = true;
+    for (int i = 0; i < pattern.length(); i++) {
+        if (flag == false) {
+            break;
+        }
+        if (pattern.at(i) != '_' && pattern.at(i) == word.at(i)) {
+            continue;
+        } else if (pattern.at(i) == '_') {
+            continue;
+        }
+        flag = false;
     }
-    if (pattern.at(curIndex) != '_' &&
-        pattern.at(curIndex) == word.at(curIndex)) {
-        recurse(pattern, word, curIndex + 1);
-    } else if (word.at(curIndex) == '_') {
-        recurse(pattern, word, curIndex + 1);
-    }
-    // delete and pop
-    return false;
+    return flag;
+    /*  if (curIndex == pattern.length()) {
+          return true;
+      }
+      if (pattern.at(curIndex) != '_' &&
+          pattern.at(curIndex) == word.at(curIndex)) {
+          recurse(pattern, word, curIndex + 1);
+      } else if (pattern.at(curIndex) == '_') {
+          recurse(pattern, word, curIndex + 1);
+      }
+      // delete and pop
+      return false;*/
 }
 
 /* TODO */

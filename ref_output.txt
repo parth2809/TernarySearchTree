@@ -1,14 +1,7 @@
-Reading file: data/short_dict.txt
+Reading file: data/unique_freq_dict.txt
 Enter a prefix/pattern to search for:
 Enter a number of completions:
-a
-a big
-a bit
-a better
-a bad
-a book
-a black
-a baby
-a bit of
-a beautiful
+mutinying
+rumanians
+humankind
 Continue? (y/n)
