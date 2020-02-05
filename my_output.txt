@@ -1,6 +1,89 @@
 Reading file: data/unique_freq_dict.txt
 Enter a prefix/pattern to search for:
 Enter a number of completions:
+anyone
+arrive
+assume
+active
+advice
+accuse
+awhile
+assure
+advise
+abduce
+Continue? (y/n)
+Enter a prefix/pattern to search for:
+Enter a number of completions:
+limed
+limen
+limey
+limes
+Continue? (y/n)
+Enter a prefix/pattern to search for:
+Enter a number of completions:
+glime
+slime
+clime
+Continue? (y/n)
+Enter a prefix/pattern to search for:
+Enter a number of completions:
+always
+around
+almost
+across
+appear
+action
+anyone
+author
+agency
+answer
+Continue? (y/n)
+Enter a prefix/pattern to search for:
+Enter a number of completions:
+grampa
+camera
+brenda
+olivia
+bianca
+monica
+amanda
+helena
+salvia
+samara
+Continue? (y/n)
+Enter a prefix/pattern to search for:
+Enter a number of completions:
+people
+theres
+should
+really
+school
+become
+family
+theyre
+little
+always
+system
+before
+happen
+during
+number
+things
+mother
+groans
+doesnt
+around
+Continue? (y/n)
+Enter a prefix/pattern to search for:
+Enter a number of completions:
+ginning
+girning
+gowning
+gunning
+gaining
+Continue? (y/n)
+Enter a prefix/pattern to search for:
+Enter a number of completions:
 mutinying
 rumanians
 humankind
