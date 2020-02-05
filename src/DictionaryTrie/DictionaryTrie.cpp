@@ -238,24 +238,24 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
                                                   unsigned int numCompletions) {
     // Finds end node of input prefix
     TrieNode* node = findNode(prefix);
-    if (node == nullptr) {
+    if (node == nullptr || numCompletions == 0) {
         vector<string> empty;
         return empty;
     }
     // Prefix itself is a word
     if (node->getFinalLetter() == true) {
-        pair<string, int> pair1;
-        pair1.first = prefix;
-        pair1.second = node->getFreq();
-        queue->push(&pair1);
+        pair<string, int>* pair1 = new pair<string, int>();
+        pair1->first = prefix;
+        int hold = node->getFreq();
+        pair1->second = hold;
+        queue->push(pair1);
     }
     // Uses helper method to find all words that include
     // the prefix and pushes to queue
     traversal(node->middle, prefix);
     vector<string> result;
-    // Loops and inserts strings from greatest priority
-    while (result.size() < numCompletions) {
-        // Num completions greater than queue size
+    // Loops and inserts strings from greatest priority / alphabetical
+    for (int i = 0; i < numCompletions; i++) {
         if (queue->size() == 0) {
             break;
         }
@@ -263,12 +263,12 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         string store = hold->first;
         result.push_back(store);
         queue->pop();
-        // delete (hold);
+        delete (hold);
     }
     while (!queue->empty()) {
         pair<string, int>* hold = (queue->top());
-        delete (hold);
         queue->pop();
+        delete (hold);
     }
     return result;
 }
@@ -276,7 +276,75 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
 /* TODO */
 std::vector<string> DictionaryTrie::predictUnderscores(
     string pattern, unsigned int numCompletions) {
+    // No completions exist
+    if (numCompletions == 0) {
+        vector<string> empty;
+        return empty;
+    }
+    TrieNode* node = root;
+    vector<string> finished;
+    // Inserts all words with length into the queue
+    traversalLength(node, "", pattern.length());
+    // Now check words in queue that match the pattern
+    while (!queue->empty() && finished.size() < numCompletions) {
+        string word = queue->top()->first;
+        bool result = recurse(pattern, word, 0);
+        if (result == true) {
+            // add to vector
+            finished.push_back(word);
+        }
+        pair<string, int>* hold = queue->top();
+        queue->pop();
+        delete (hold);
+        // pop and delete
+    }
+    while (!queue->empty()) {
+        pair<string, int>* hold = queue->top();
+        queue->pop();
+        delete (hold);
+    }
+    return finished;
+    // pattern doesnt contain underscore?
+    //   recurse()
     return {};
+}
+// pushes all words with set length into queue starting from root
+void DictionaryTrie::traversalLength(TrieNode* node, string word, int length) {
+    if (word.length() > length) {
+        return;
+    }
+    if (node != nullptr) {
+        traversalLength(node->left, word, length);
+
+        // Found a word, then creates a pair and adds to priority queue
+        if (node->getFinalLetter() == true && (word.length() + 1 == length)) {
+            // Creates pair with string and frequency
+            pair<string, int>* pair1 = new pair<string, int>();
+            pair1->first = word + node->getVal();
+            pair1->second = node->getFreq();
+            // Pushes the pair into the queue
+            queue->push(pair1);
+        }
+        // If going down, then it includes the character and continues
+        // traversing
+        traversalLength(node->middle, word + node->getVal(), length);
+
+        traversalLength(node->right, word, length);
+    }
+}
+// word is pattern including the underscores
+bool DictionaryTrie::recurse(string pattern, string word, int curIndex) {
+    if (curIndex == pattern.length() - 1) {
+        return true;
+    }
+    if (pattern.at(curIndex) != '_' &&
+        pattern.at(curIndex) == word.at(curIndex)) {
+        recurse(pattern, word, curIndex + 1);
+    } else if (word.at(curIndex) == '_') {
+        recurse(pattern, word, curIndex + 1);
+    }
+    // delete and pop
+    return false;
 }
 
 /* TODO */
