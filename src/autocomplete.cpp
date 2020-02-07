@@ -1,5 +1,8 @@
-/*
- * TODO: File Header
+/**
+ * This is the autocomplete cpp file. It has the implementations for user input
+ * to use a Trie dictionary to find desired strings
+ * Authors: Parth Shah, Quylan Mac
+ * Sources used: CSE100 PA2 write-up, Stepik Textbook
  */
 #include <fstream>
 #include <iostream>
@@ -73,12 +76,15 @@ int main(int argc, char** argv) {
         cout << "Enter a number of completions:" << endl;
         cin >> numberOfCompletions;
         vector<string> result;
+        // Checks if the input word contains underscores
         if (word.find("_") != string::npos) {
+            // Calls underscore predictor
             result = dt->predictUnderscores(word, numberOfCompletions);
         } else {
+            // Calls regular predictor
             result = dt->predictCompletions(word, numberOfCompletions);
         }
-        // TODO
+        // Loops through result vector string to display strings
         for (int i = 0; i < result.size(); i++) {
             cout << result[i] << endl;
         }

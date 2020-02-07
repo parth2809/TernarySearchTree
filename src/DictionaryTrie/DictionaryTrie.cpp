@@ -1,8 +1,8 @@
 /**
  * This is the Dictionary Trie cpp file. It has the implementation for all the
  * methods for the dictionary trie class in the hpp file.
- * Authors: Parth Shah,
- * Quylan Mac Sources used: CSE100 PA2 write-up, Stepik Textbook
+ * Authors: Parth Shah,Quylan Mac
+ * Sources used: CSE100 PA2 write-up, Stepik Textbook
  */
 #include "DictionaryTrie.hpp"
 #include <algorithm>
@@ -97,7 +97,7 @@ bool DictionaryTrie::insert(string word, unsigned int freq) {
                 node->setFinalLetter(true);
                 return true;
             }
-            //// checks if char is the same as node's value to traverse down
+            // checks if char is the same as node's value to traverse down
         } else {
             // checks if the position is equal to the length of the word
             if (position == word.length() - 1) {
@@ -195,8 +195,13 @@ bool DictionaryTrie::find(string word) const {
     }
     return false;
 }
-
+/**
+ * Helper method to find the pointer to a node
+ * Returns the pointer of a node of a string
+ * Parameter: the word wanting to find in the trie
+ */
 TrieNode* DictionaryTrie::findNode(string word) const {
+    // Base case
     if (root == nullptr) {
         return nullptr;
     }
@@ -205,22 +210,29 @@ TrieNode* DictionaryTrie::findNode(string word) const {
     char c = word[position];
 
     while (true) {
+        // Looks if is smaller than given node
         if (c < node->getVal()) {
+            // Moves to left subtree
             if (node->left != nullptr) {
                 node = node->left;
             } else {
                 return nullptr;
             }
-        } else if (c > node->getVal()) {
+        }
+        // Looks if bigger than given node
+        else if (c > node->getVal()) {
             if (node->right != nullptr) {
+                // Sets node to right subtree if valid
                 node = node->right;
             } else {
                 return nullptr;
             }
-        } else {
+        }  // Checks if end of the word
+        else {
             if (position == word.length() - 1) {
                 return node;
-            } else {
+            }  // Moves down the trie and looks to next character in string
+            else {
                 if (node->middle != nullptr) {
                     node = node->middle;
                     ++position;
@@ -232,7 +244,13 @@ TrieNode* DictionaryTrie::findNode(string word) const {
         }
     }
 }
-
+/**
+ * Helper method to traverse through a trie and push
+ * pairs to a priority queue
+ * Parameters: node to look at where we are in the trie;
+ * prefix, the current string we are looking to find;
+ * numCompletions, how many times we are going to push to a prio queue
+ */
 void DictionaryTrie::traversal(TrieNode* node, string prefix,
                                int numCompletions) {
     // make queue up to size of numcompletions, then replace min with next one
@@ -252,6 +270,7 @@ void DictionaryTrie::traversal(TrieNode* node, string prefix,
             } else {
                 // Current node greater than min freq in queue
                 if (node->getFreq() > queue->top()->second) {
+                    // Creates and pushes pair while replacing the minimum
                     pair<string, int>* pair1 = new pair<string, int>();
                     pair1->first = prefix + node->getVal();
                     pair1->second = node->getFreq();
@@ -259,8 +278,10 @@ void DictionaryTrie::traversal(TrieNode* node, string prefix,
                     pair<string, int>* hold = queue->top();
                     queue->pop();
                     delete (hold);
-                } else if (node->getFreq() == queue->top()->second) {
+                }  // Compares alphabetically if freq is same
+                else if (node->getFreq() == queue->top()->second) {
                     if ((prefix + node->getVal()) > queue->top()->first) {
+                        // Creates and pushes pair while replacing the minimum
                         pair<string, int>* pair1 = new pair<string, int>();
                         pair1->first = prefix + node->getVal();
                         pair1->second = node->getFreq();
@@ -272,26 +293,32 @@ void DictionaryTrie::traversal(TrieNode* node, string prefix,
                 }
             }
         }
-
         // If going down, then it includes the character and continues
-        // traversing
+        // traversing recursively down the middle
         traversal(node->middle, prefix + node->getVal(), numCompletions);
-
+        // Recursivey calls to the right subtree
         traversal(node->right, prefix, numCompletions);
     }
 }
 
-/* TODO */
+/**
+ * Finds a given number of strings in the trie that match the given prefix
+ * Returns a vector of strings containing the most frequent strings of a given
+ * prefix Parameters: prefix, the substring we are looking to match
+ * numCompletions, how many strings to find
+ */
 vector<string> DictionaryTrie::predictCompletions(string prefix,
                                                   unsigned int numCompletions) {
-    // Finds end node of input prefix
+    // Helper to finds end node of input prefix
     TrieNode* node = findNode(prefix);
+    // Base cases to return empty vector
     if (node == nullptr || numCompletions == 0) {
         vector<string> empty;
         return empty;
     }
     // Prefix itself is a word
     if (node->getFinalLetter() == true) {
+        // Creates pair and pushes to queue
         pair<string, int>* pair1 = new pair<string, int>();
         pair1->first = prefix;
         int hold = node->getFreq();
@@ -313,16 +340,23 @@ vector<string> DictionaryTrie::predictCompletions(string prefix,
         queue->pop();
         delete (hold);
     }
+    // Clears the queue by popping and deleting
     while (!queue->empty()) {
         pair<string, int>* hold = (queue->top());
         queue->pop();
         delete (hold);
     }
+    // Reverses the vector since we need to have descending order of frequency
     reverse(result.begin(), result.end());
     return result;
 }
 
-/* TODO */
+/**
+ * Finds the most frequent strings that follow a given pattern
+ * Parameters: pattern, which includes underscores that can be filled by any
+ * value Returns a vector of strings from most frequent order that follow a
+ * pattern
+ */
 std::vector<string> DictionaryTrie::predictUnderscores(
     string pattern, unsigned int numCompletions) {
     // No completions exist
@@ -337,30 +371,38 @@ std::vector<string> DictionaryTrie::predictUnderscores(
     // Now check words in queue that match the pattern
     while (!rqueue->empty() && finished.size() < numCompletions) {
         string word = rqueue->top()->first;
+        // Uses helper to find if the word matches the pattern
         bool result = recurse(pattern, word);
+        // Adds to vector if word matches
         if (result == true) {
-            // add to vector
             finished.push_back(word);
         }
+        // Deletes and pops the pair
         pair<string, int>* hold = rqueue->top();
         rqueue->pop();
         delete (hold);
-        // pop and delete
     }
+    // Clears the queue and memory
     while (!rqueue->empty()) {
         pair<string, int>* hold = rqueue->top();
         rqueue->pop();
         delete (hold);
     }
     return finished;
-    // pattern doesnt contain underscore?
 }
-// pushes all words with set length into queue starting from root
+/**
+ *  pushes all words with set length into queue starting from root
+ * Parameters: node, the current node looking at ;
+ * word, the word to match;
+ * length, how long the word is
+ */
 void DictionaryTrie::traversalLength(TrieNode* node, string word, int length) {
+    // Base case
     if (word.length() >= length) {
         return;
     }
     if (node != nullptr) {
+        // Recursive call to left child
         traversalLength(node->left, word, length);
 
         // Found a word, then creates a pair and adds to priority queue
@@ -375,20 +417,29 @@ void DictionaryTrie::traversalLength(TrieNode* node, string word, int length) {
         // If going down, then it includes the character and continues
         // traversing
         traversalLength(node->middle, word + node->getVal(), length);
-
+        // Recursive call to right child
         traversalLength(node->right, word, length);
     }
 }
-// word is pattern including the underscores
+/**
+ * Checks if pattern matches a word
+ * parmaters: pattern, the pattern to match with underscores;
+ * word, the word to match to pattern
+ */
 bool DictionaryTrie::recurse(string pattern, string word) {
     bool flag = true;
+    // Loops through
     for (int i = 0; i < pattern.length(); i++) {
+        // Case where a character doesn't match
         if (flag == false) {
             break;
         }
+        // Character matches, continues to look at next
         if (pattern.at(i) != '_' && pattern.at(i) == word.at(i)) {
             continue;
-        } else if (pattern.at(i) == '_') {
+        }
+        // If underscore, any character works
+        else if (pattern.at(i) == '_') {
             continue;
         }
         flag = false;
@@ -396,14 +447,20 @@ bool DictionaryTrie::recurse(string pattern, string word) {
     return flag;
 }
 
-/* TODO */
+/**
+ * Destructor to delete trie and the prio queue
+ */
 DictionaryTrie::~DictionaryTrie() {
     deleteAll(root);
     delete queue;
     delete rqueue;
 }
-
+/**
+ * Helper to delete all trie nodes recursively
+ * Parameter: n, current node
+ */
 void DictionaryTrie::deleteAll(TrieNode* n) {
+    // Base case where nothing to delete
     if (n == nullptr) {
         return;
     }
